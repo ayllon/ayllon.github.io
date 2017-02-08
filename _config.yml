@@ -1,0 +1,54 @@
+# Site Info
+title:              "Alejandro Álvarez Ayllón"
+description:        ""
+google_verify:      # Put your Google Verification here
+google_analytics:   # Put your Google Analytics code
+
+# Author Info
+author_name:        "Alejandro Álvarez Ayllón"
+author_email:       a.alvarezayllon@gmail.com
+author_gravatar:    3b79c675fa3398192688772e3a89228d # Gravatar md5 hash
+twitter_username:   AlexChillon
+github_username:    ayllon
+
+# Site Settings
+baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
+permalink:          /notes/:year/:month/:day/:title # Post permalink
+timezone:           Europe/Zurich # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to false to disable
+
+# Site Build
+highlighter:        rouge
+#markdown:           redcarpet
+#redcarpet:
+#    extensions:     ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "highlight", "footnotes"]
+markdown:           kramdown
+kramdown:
+    input:          GFM
+    hard_wrap:      false
+sass:
+    style:          :compressed
+
+# Other Params
+include:            []
+exclude:            [ "README.md" ]
+
+#gems:
+#  - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
