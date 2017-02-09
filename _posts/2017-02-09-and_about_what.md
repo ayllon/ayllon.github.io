@@ -3,7 +3,7 @@ title: And about what?
 ---
 
 ## And about what?
-So, obviously, the first task has to be decide the subject of the thesis.
+So, obviously, the first task has to be deciding the subject of the thesis.
 On the plus side, since I am not doing the PhD with a grant, I have relative
 freedom on the subject. At the same time, that can be a negative point, because
 it makes harder to decide.
