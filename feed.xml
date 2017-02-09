@@ -1,4 +1,6 @@
---- layout: null ---
+---
+layout: null
+---
 
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -31,8 +33,7 @@
   <entry>
     <title type="html">{{ post.title | xml_escape }}</title>
     <id>{{ post.url | prepend: site.baseurl }}</id>
-    <updated>{{ post.updated | date_to_xmlschema }}</updated>
-    <published>{{ post.path | truncate: 20 | replace: "...", "" | replace: "_posts/", "" }}T10:00:00+02:00</published>
+    <published>{{ post.date | date_to_rfc822 }}</published>
     <content type="html" xml:lang="en">
       <![CDATA[{{ content }}]]>
     </content>
