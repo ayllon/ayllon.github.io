@@ -24,8 +24,8 @@ having to write complex C++ programs that need to search file per file.
 This solution should perform at least as good as a bare C++ program.
 
 ### Possible approaches
-It has been discussed to use the CPU of the EOS disks servers to run
-user jobs. Part of the system could follow the same approach, and run
+There has been prototyping efforts to use the CPU of the EOS disks servers for running
+user jobs. Part of the system could follow the same approach, run
 jobs on EOS disks, and then aggregate.
 
 ### Difficulties
@@ -34,11 +34,12 @@ to a specific way of encoding event data on these files.
 * How to allow for extra formats?
 * A query language is not a trivial task, nor a query planner/optimizer.
   * Maybe there are reusable bits? [^presto]
-* Plenty of literature, probably.
+* Probably, plenty of literature.
 * Is it really different to an existing Cluster DB? Are ROOT files after all
 Object Databases? Are we just re-doing RAW[^raw] or Hadoop?
 * Is there a niche for middleware here? Something that sits between custom file
-formats spread around on EOS (or whatever) and the query engine?
+formats spread around on EOS (or whatever) and the query language? Sort of the clang
+AST for distributed queries.
 
 [^root]: [ROOT - An Object Oriented Data Analysis Framework](http://www-ai.cs.uni-dortmund.de/PublicPublicationFiles/brun_rademakers_97a_2.pdf), Rene Brun and Fons Rademakers
 [^raw]: [Adaptive query processing on RAW data](http://dl.acm.org/citation.cfm?id=2732986), Manos Karpathiotakis et al
