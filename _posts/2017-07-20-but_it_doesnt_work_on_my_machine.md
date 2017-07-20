@@ -53,7 +53,7 @@ Specifically, at `globus_i_gsi_gss_utils.c:474` it seems like something called
 
 "Empty fragment" and a spurious `0` looks suspicious.
 
-And indeed, when I built a patched version, disabling empty fragments again,
+And indeed, when I built a patched version, disabling empty fragments,
 everything would work just fine again.
 
 These empty fragments happen to be a countermeasure against [a vulnerability of CBC
