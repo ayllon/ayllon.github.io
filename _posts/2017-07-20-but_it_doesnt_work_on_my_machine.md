@@ -27,7 +27,7 @@ Since this was affecting the SRM protocol, I run this on both the production
 machine, and the development one:
 
 ```bash
-for i in `ldd /usr/lib64/gfal2-plugins/libgfal_plugin_srm.so | cut -d'>' -f2 | cut -d' ' -f 2 | grep -v "(" |grep -v "^$" `; do
+for i in `ldd /usr/lib64/gfal2-plugins/libgfal_plugin_srm.so | sed -nr "s/.* => ([^[:space:]]+)(.*)/\1/p"`; do
   rpm -qf $i;
 done | sort | uniq
 ```
