@@ -23,4 +23,4 @@ solved, the directory will remain occupying all that much space.
 Now, FTS3 uses "DirQ", an implementation from the messaging team that uses
 subdirectories, which are gone when empty, reducing considerably the problem.
 
-P.S `fsck.ext2 -D` can solve the issue without deleting the directory. 
+P.S `fsck.ext* -D` can solve the issue without deleting the directory. 
