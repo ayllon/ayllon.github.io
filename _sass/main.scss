@@ -20,13 +20,12 @@ img {
 }
 a {
   color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid #555;
+  text-decoration: underline;
   &.image {
+    border: 0;
     display: block;
     text-align: center;
     border: 0;
-    border-radius: 5px;
     margin: 30px 0;
   }
 }
