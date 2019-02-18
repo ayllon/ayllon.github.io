@@ -33,14 +33,18 @@ So, not only do I need to measure single threaded, but also multi-threaded.
 I went ahead and generated plots single threaded, and running with four threads.
 
 <figure>
-  <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/single-thread.png" alt="Single thread performance"/>
+  <a href="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/single-thread.png">
+    <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/single-thread.png" alt="Single thread performance"/>
+  </a>
   <figcaption>Running with a single thread</figcaption>
 </figure>
 
 The tile manager is surely doing a good job.
 
 <figure>
-  <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-thread.png" alt="Four threads"/>
+  <a href="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-thread.png">
+    <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-thread.png" alt="Four threads"/>
+  </a>
   <figcaption>Running with four threads</figcaption>
 </figure>
 
@@ -57,7 +61,9 @@ Next thing I did was to run with kind-of-multithreaded: one thread for
 detection, and one for measurements.
 
 <figure>
-  <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread.png" alt="Two threads"/>
+  <a href="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread.png">
+    <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread.png" alt="Two threads"/>
+  </a>
   <figcaption>Running with one separate thread for measurements</figcaption>
 </figure>
 
@@ -68,7 +74,9 @@ Another thing I tried was to change the maximum memory allowed for the tile
 manager.
 
 <figure>
-  <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread-2gb.png" alt="2 GiB"/>
+  <a href="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread-2gb.png">
+    <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread-2gb.png" alt="2 GiB"/>
+  </a>
   <figcaption>2 GiB memory for the tile manager</figcaption>
 </figure>
 
@@ -78,7 +86,9 @@ it was already too on the nose that it was doubling the limit.
 Let's go crazy. 5 GiB.
 
 <figure>
-  <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread-5gb.png" alt="5 GiB"/>
+  <a href="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread-5gb.png">
+    <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/multi-single-thread-5gb.png" alt="5 GiB"/>
+  </a>
   <figcaption>5 GiB memory for the tile manager</figcaption>
 </figure>
 
@@ -93,7 +103,9 @@ Next thing I did was to profile more in detail the heap allocations, using
 [heaptrack](https://github.com/KDE/heaptrack), a very useful tool.
 
 <figure>
-  <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/heaptrack.png" alt="Heaptrack consumed memory"/>
+  <a href="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/heaptrack.png">
+    <img src="{{baseurl}}/img/2019/2019-02-15-where-is-my-memory/heaptrack.png" alt="Heaptrack consumed memory"/>
+  </a>
   <figcaption>Consumed memory as reported by heaptrack</figcaption>
 </figure>
 
@@ -101,3 +113,5 @@ So the memory consumed on the heap, for the execution limiting the memory for
 the tiles to 512 MiB is, well... what I would be expecting, even better.
 
 Could this be a case of memory fragmentation?
+
+[The conclusion on "Where is my memory II"]({%post_url 2019/2019-02-18-where-is-my-memory-2%})
