@@ -41,7 +41,7 @@ vary wildly.
    function. On the other side, the code will execute as one would (but should
    not) expect.
 3. With link-time optimization, the compiler will be able to *peek* at what
-   `isEqual` is doing. Due to [string aliasing rules](https://en.wikipedia.org/wiki/Aliasing_(computing)#Conflicts_with_optimization),
+   `isEqual` is doing. Due to [strict aliasing rules](https://en.wikipedia.org/wiki/Aliasing_(computing)#Conflicts_with_optimization),
    it will asume that the pointer to `UInt` has nothing to do with the pointer
    to `double`. It will conclude that the `double` is not used, and just skip
    pushing the values into the stack.
