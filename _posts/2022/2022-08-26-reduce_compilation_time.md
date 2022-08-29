@@ -1,3 +1,6 @@
+---
+title: Reducing compilation time of PhosphorosCore
+---
 I watched the episode [Analyzing and Improving Build Times](https://youtu.be/Iybb9wnpF00)
 from C++ Weekly the other day.
 
